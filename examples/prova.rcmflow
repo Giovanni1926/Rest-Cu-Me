@@ -1,0 +1,207 @@
+{
+  "variables": {
+    "ciao": "merda"
+  },
+  "nodes": [
+    {
+      "id": "n1",
+      "x": 91170,
+      "y": -10920,
+      "kind": "rest",
+      "call": {
+        "method": "GET",
+        "url": "asdasd",
+        "query": {},
+        "headers": {
+          "ciao": "${ciao}"
+        },
+        "auth": {
+          "type": "none"
+        },
+        "bodyFormat": "json",
+        "body": "",
+        "contentType": "application/json"
+      },
+      "vars": {}
+    },
+    {
+      "id": "n2",
+      "x": 270520,
+      "y": 3200,
+      "title": "asdasda",
+      "kind": "soap",
+      "call": {
+        "method": "POST",
+        "url": "asdasdas",
+        "query": {},
+        "headers": {},
+        "auth": {
+          "type": "none"
+        },
+        "body": "",
+        "contentType": "text/xml; charset=utf-8",
+        "soap": {
+          "version": "1.1",
+          "operation": "",
+          "namespace": "",
+          "qualified": true,
+          "action": "",
+          "parameters": {},
+          "soapHeaders": {},
+          "bodyXml": "<ciao> <mammt>"
+        }
+      },
+      "vars": {}
+    },
+    {
+      "id": "n3",
+      "x": -40,
+      "y": -120,
+      "title": "Token",
+      "kind": "variables",
+      "vars": {}
+    },
+    {
+      "id": "n4",
+      "x": 150,
+      "y": 150,
+      "title": "asda",
+      "kind": "rest",
+      "call": {
+        "method": "GET",
+        "url": "asda",
+        "query": {},
+        "headers": {},
+        "auth": {
+          "type": "none"
+        },
+        "bodyFormat": "json",
+        "body": "",
+        "contentType": "application/json"
+      },
+      "vars": {}
+    },
+    {
+      "id": "n5",
+      "x": 180,
+      "y": 180,
+      "title": "Ciao",
+      "kind": "rest",
+      "call": {
+        "method": "GET",
+        "url": "mamm",
+        "query": {},
+        "headers": {},
+        "auth": {
+          "type": "none"
+        },
+        "bodyFormat": "json",
+        "body": "",
+        "contentType": "application/json"
+      },
+      "vars": {}
+    },
+    {
+      "id": "n6",
+      "x": 210,
+      "y": 210,
+      "title": "asdas",
+      "kind": "rest",
+      "call": {
+        "method": "GET",
+        "url": "asdasda",
+        "query": {},
+        "headers": {},
+        "auth": {
+          "type": "none"
+        },
+        "bodyFormat": "json",
+        "body": "",
+        "contentType": "application/json"
+      },
+      "vars": {}
+    },
+    {
+      "id": "n7",
+      "x": 1580,
+      "y": -15130,
+      "title": "asda",
+      "kind": "rest",
+      "call": {
+        "method": "GET",
+        "url": "asdasd",
+        "query": {},
+        "headers": {},
+        "auth": {
+          "type": "none"
+        },
+        "bodyFormat": "json",
+        "body": "",
+        "contentType": "application/json"
+      },
+      "vars": {}
+    },
+    {
+      "id": "n8",
+      "x": 1950,
+      "y": -15090,
+      "title": "asdas",
+      "kind": "soap",
+      "call": {
+        "method": "POST",
+        "url": "asdasd",
+        "query": {},
+        "headers": {},
+        "auth": {
+          "type": "none"
+        },
+        "body": "",
+        "contentType": "text/xml; charset=utf-8",
+        "soap": {
+          "version": "1.2",
+          "operation": "",
+          "namespace": "",
+          "qualified": true,
+          "action": "",
+          "parameters": {},
+          "soapHeaders": {},
+          "bodyXml": "<zx<z",
+          "wsdl": {
+            "source": "asd",
+            "service": ""
+          }
+        }
+      },
+      "vars": {}
+    }
+  ],
+  "edges": [],
+  "groups": [
+    {
+      "id": "g1",
+      "name": "Pippo1",
+      "x": 60,
+      "y": -60,
+      "w": 340,
+      "h": 240,
+      "nodeIds": [
+        "n2",
+        "n1"
+      ],
+      "variables": {}
+    },
+    {
+      "id": "g2",
+      "name": "Collection 2",
+      "x": 1520,
+      "y": -15220,
+      "w": 770,
+      "h": 310,
+      "nodeIds": [
+        "n7",
+        "n8"
+      ],
+      "variables": {}
+    }
+  ]
+}

@@ -1,0 +1,110 @@
+{
+  "variables": {
+    "intA": "5",
+    "intB": "3"
+  },
+  "nodes": [
+    {
+      "id": "n1",
+      "x": 60,
+      "y": 60,
+      "title": "Add (5 + 3)",
+      "kind": "soap",
+      "call": {
+        "method": "POST",
+        "url": "http://www.dneonline.com/calculator.asmx",
+        "query": {},
+        "headers": {},
+        "auth": {
+          "type": "none"
+        },
+        "body": "",
+        "contentType": "text/xml; charset=utf-8",
+        "soap": {
+          "version": "1.1",
+          "operation": "Add",
+          "namespace": "http://tempuri.org/",
+          "qualified": true,
+          "action": "http://tempuri.org/Add",
+          "parameters": {
+            "intA": "${intA}",
+            "intB": "${intB}"
+          },
+          "soapHeaders": {},
+          "bodyXml": "",
+          "wsdl": {
+            "source": "http://www.dneonline.com/calculator.asmx?wsdl",
+            "service": "Calculator (CalculatorSoap)",
+            "operation": "Add"
+          }
+        }
+      },
+      "vars": {}
+    },
+    {
+      "id": "n2",
+      "x": 380,
+      "y": 60,
+      "title": "Multiply (somma x 2)",
+      "kind": "soap",
+      "call": {
+        "method": "POST",
+        "url": "http://www.dneonline.com/calculator.asmx",
+        "query": {},
+        "headers": {},
+        "auth": {
+          "type": "none"
+        },
+        "body": "",
+        "contentType": "text/xml; charset=utf-8",
+        "soap": {
+          "version": "1.1",
+          "operation": "Multiply",
+          "namespace": "http://tempuri.org/",
+          "qualified": true,
+          "action": "http://tempuri.org/Multiply",
+          "parameters": {
+            "intA": "${somma}",
+            "intB": "2"
+          },
+          "soapHeaders": {},
+          "bodyXml": "",
+          "wsdl": {
+            "source": "http://www.dneonline.com/calculator.asmx?wsdl",
+            "service": "Calculator (CalculatorSoap)",
+            "operation": "Multiply"
+          }
+        }
+      },
+      "vars": {}
+    }
+  ],
+  "edges": [
+    {
+      "id": "e1",
+      "from": "n1",
+      "to": "n2",
+      "outputs": [
+        {
+          "name": "somma",
+          "expr": "//*[local-name()='AddResult']/text()"
+        }
+      ]
+    }
+  ],
+  "groups": [
+    {
+      "id": "g1",
+      "name": "Esempio SOAP - DNE Online Calculator",
+      "x": 20,
+      "y": 20,
+      "w": 640,
+      "h": 200,
+      "nodeIds": [
+        "n1",
+        "n2"
+      ],
+      "variables": {}
+    }
+  ]
+}
